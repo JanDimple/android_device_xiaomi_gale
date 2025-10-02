@@ -14,9 +14,9 @@ $(call inherit-product, device/xiaomi/gale/device.mk)
 # Inherit some common LineageOS stuff.
 TARGET_BUILD_GAPPS := true
 TARGET_ENABLE_BLUR := true
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := yaap_gale
+PRODUCT_NAME := lineage_gale
 PRODUCT_DEVICE := gale
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
