@@ -98,6 +98,10 @@ on fs
         restorecon_recursive /mnt/vendor/persist
     # M372  Add for sensor calibration command in 20230606 end
 
+    # Display
+    chmod 0660 /dev/graphics/fb0
+    chown system graphics /dev/graphics/fb0
+
     mount ext4 /dev/block/by-name/rescue /mnt/rescue noatime
     restorecon_recursive /mnt/rescue
 
