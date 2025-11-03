@@ -133,6 +133,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_gale)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
