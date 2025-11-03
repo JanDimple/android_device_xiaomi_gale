@@ -291,6 +291,14 @@ PRODUCT_PACKAGES += \
     libwifi-hal-wrapper \
     android.hardware.wifi-service
 
+# Signing
+SIGNING_KEY_PATH ?= certs
+RELEASE_KEY := $(SIGNING_KEY_PATH)/releasekey
+SIGNING_KEY_PATH ?= certs
+RELEASE_KEY := $(SIGNING_KEY_PATH)/releasekey
+PRODUCT_DEFAULT_DEV_CERTIFICATE := $(RELEASE_KEY)
+PRODUCT_OTA_PUBLIC_KEYS := $(RELEASE_KEY)
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
